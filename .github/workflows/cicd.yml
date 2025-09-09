@@ -70,4 +70,4 @@ jobs:
             
             # 새로운 이미지로 컨테이너를 실행합니다.
             # 필요에 따라 포트 번호(-p 8080:8080)나 다른 옵션을 추가해주세요.
-            sudo docker run -d --name ${{ github.event.repository.name }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
+            sudo docker run -d -p 8080:8080 --name ${{ github.event.repository.name }} ${{ secrets.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:latest
